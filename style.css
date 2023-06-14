@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+:root {
+	--primaryBackgroundColor: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	--primaryFontColor: #c7365f;
+	--primaryFontFamily: "Nunito", sans-serif;
+	--primaryTransparentColor: rgba(255, 255, 255, 0.4);
+	--diceBoxShadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+	--primaryTransition: all 0.4s linear;
+	--primaryBoxShadow: 0px 0px 15px #222;
+}
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: var(--primaryFontFamily);
+	background: var(--primaryBackgroundColor);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+section {
+	min-height: 100vh;
+	text-transform: uppercase;
+	letter-spacing: 0.25rem;
+}
+.modal__1,.modal__2{
+    z-index: 12;
+    text-align: center;
+    left: 31.5%;
+    top: 30%;
+    background-image: linear-gradient(315deg, #ffffb5 0%, #247ba0 74%);
+    color: #222;
+    border-radius: 10px;
+    padding: 60px 30px;
+    box-shadow: var(--primaryBoxShadow);
+}
+.modal__2{
+	left: 27%;
+	width: 45%;
+	top: 25%;
+}
+.hidden{
+	display: none;
+}
+.btn{
+	box-shadow: var(--primaryBoxShadow);
+	transition: var(--primaryTransition);
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+.btn:hover{
+	letter-spacing: 2px;
+}
+.overlay{
+    filter: blur(50px);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #0cbabab1 0%, #380036ab 74%);
+	z-index: 10;
+}
+.player {
+	display: flex;
+	min-height: calc(100vh - 20vh);
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	text-align: center;
+	transition: var(--primaryTransition);
+	box-shadow: 0px 1px 1px 3.5px;
+}
+.player__0{
+	background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.player__1{
+	background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+.playerActive{
+	background: #fff;
+}
+.playerWinner{
+	background: #000;
+	color: var(--primaryFontColor) !important;
+}
+.colorChange{
+	color: var(--primaryFontColor) !important;
+}
+.boldFont{
+	font-weight: bold;
+}
+.displayDice {
+	box-shadow: var(--diceBoxShadow);
+	width: 130px;
+	margin: auto;
+	border: 3px solid var(--primaryFontColor);
+	border-radius: 1rem;
+}
+img {
+	border-radius: 10px;
+	max-width: 100%;
+}
+.playerPoint h1 {
+	font-weight: bold;
+	font-size: 4rem;
+}
+.playerCurrentScore {
+	background: var(--primaryFontColor);
+}
+.gameConfig {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 60vh;
+}
+.modalTitle{
+	top: 7%;
+	right: 4%;
+	cursor: pointer;
+}
+@media screen and (max-width: 279.98px){
+	.playerCurrentScore{
+		padding: 1rem 2rem !important;
+	}
+	.btn{
+		font-size: 12px !important;
+	}
+}
+@media screen and (min-width: 279.98px) and (max-width: 767.98px){
+	.gameConfig{
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	.btn{
+		font-size: 15px;
+	}
+	section{
+		margin: 50px 0px;
+	}
+	.playerOne{
+		border-bottom-left-radius: 0 !important;
+		border-top-right-radius: 0.5rem;
+	}
+	.playerTwo{
+		border-top-right-radius: 0 !important;
+		border-bottom-left-radius: 0.5rem;
+	}
+	.diceRollBtn {
+		margin-bottom: 0rem !important;
+	}
+}

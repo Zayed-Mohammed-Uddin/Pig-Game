@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pig Game</title>
+	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./fontawesome-pro-master/css/all.min.css">
+	<link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+	<section class="container-fluid d-flex align-items-center justify-content-center">
+		<div class="overlay hidden position-absolute"></div>
+		<div class="container position-relative">
+			<div class="modal__1 hidden position-absolute">
+				<div class="modalTitle position-absolute">
+					<span class="close_btn"><i class="fa-solid fa-xmark fa-2xl"></i></span>
+				</div>
+				<div class="modalBody">
+					<h1 class="mb-3"><i class="fa-solid fa-trophy-star fa-lg"></i></h1>
+					<h1>Player <span id="playerWinner"></span> Winner!</h1>
+				</div>
+			</div>
+			<div class="modal__2 hidden position-absolute">
+				<div class="modalTitle position-absolute">
+					<span class="close_btn"><i class="fa-solid fa-xmark fa-2xl"></i></span>
+				</div>
+				<div class="modalBody">
+					<h3 class="lh-lg mb-4">Are you sure about resetting the game data?</h3>
+					<div class="btn--grp d-flex align-items-center justify-content-evenly">
+						<button class="btn btn-danger btn-lg text-uppercase" id="btn__yes">Yes</button>
+						<button class="btn btn-success btn-lg text-uppercase" id="btn__no">No</button>
+					</div>
+				</div>
+			</div>
+			<div class="row g-0 align-items-center justify-content-center position-relative">
+				<div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+					<div class="player player__0 playerActive rounded-start-3">
+						<div class="playerTitle">
+							<h1 class="playerTitle--0 boldFont">Player 1</h1>
+						</div>
+						<div class="playerPoint">
+							<h1 id="player__score__0" class="colorChange">0</h1>
+						</div>
+						<div class="playerCurrentScore px-5 py-4 rounded text-white">
+							<h5 class="text-uppercase mb-3">Current</h5>
+							<h2 class="text-uppercase" id="playerCurrScore__0">0</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 position-absolute">
+					<div class="gameConfig">
+						<div class="newGameBtn">
+							<button class="btn text-uppercase btn-lg btn-success rounded-pill" type="reset"
+								id="resetBtn">
+								<i class="fa-regular fa-arrows-rotate fa-lg"></i> New Game
+							</button>
+						</div>
+						<div class="displayDice hidden">
+							<img class="img-fluid rounded dice" src="./app_asset/dice-1.png" alt="Dice Image">
+						</div>
+						<div class="diceRollBtn mb-4">
+							<button class="btn btn-primary btn-lg btn-rounded text-uppercase rounded-pill"
+								id="btnRollDice">
+								<i class="fa-solid fa-dice fa-lg"></i> Roll Dice
+							</button>
+						</div>
+						<div class="holdBtn">
+							<button class="btn btn-warning btn-lg btn-rounded text-uppercase rounded-pill" id="btnHold">
+								<i class="fa-solid fa-bolt fa-lg"></i> Hold
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+					<div class="player player__1 rounded-end-3">
+						<div class="playerTitle">
+							<h1 class="playerTitle--1">Player 2</h2>
+						</div>
+						<div class="playerPoint">
+							<h1 id="player__score__1">0</h1>
+						</div>
+						<div class="playerCurrentScore px-5 py-4 rounded text-white">
+							<h5 class="text-uppercase mb-3">Current</h5>
+							<h2 class="text-uppercase" id="playerCurrScore__1">0</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./fontawesome-pro-master/js/all.min.js"></script>
+	<script src="./app.js"></script>
+</body>
+
+</html>
